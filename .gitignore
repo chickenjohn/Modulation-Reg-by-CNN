@@ -1,2 +1,4 @@
 *.dat
+*.csv
 *.ipynb_checkpoints/
+.vscode/
