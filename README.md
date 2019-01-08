@@ -6,9 +6,9 @@ I can evaluate its performance on platforms other than Intel x86.
 
 ## Pre-request
 
-Python 3
-Tensorflow
-RML Dataset (downloadable [here](https://www.deepsig.io/datasets/))
+* Python 3
+* Tensorflow
+* RML Dataset (downloadable [here](https://www.deepsig.io/datasets/))
 
 ## Usage
 
