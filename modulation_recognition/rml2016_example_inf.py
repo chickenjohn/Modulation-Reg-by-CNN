@@ -48,18 +48,13 @@ model = models.Sequential()
 model.add(Reshape([1]+in_shp, input_shape=in_shp))
 model.add(ZeroPadding2D((0, 2)))
 model.add(Conv2D(256, (1, 3), padding='valid', activation="relu", name="conv1", kernel_initializer='glorot_uniform'))
-model.add(Dropout(dr))
 model.add(ZeroPadding2D((0, 2)))
 model.add(Conv2D(80, (2, 3), padding="valid", activation="relu", name="conv2", kernel_initializer='glorot_uniform'))
-model.add(Dropout(dr))
 model.add(Flatten())
 model.add(Dense(256, activation='relu', kernel_initializer='he_normal', name="dense1"))
-model.add(Dropout(dr))
 model.add(Dense( len(classes), kernel_initializer='he_normal', name="dense2" ))
 model.add(Activation('softmax'))
 model.add(Reshape([len(classes)]))
-model.compile(loss='categorical_crossentropy', optimizer='adam')
-model.summary()
 
 filepath = 'convmodrecnets_CNN2_0.5.wts.h5'
 # we re-load the best weights once training is finished
